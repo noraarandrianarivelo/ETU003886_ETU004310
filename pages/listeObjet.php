@@ -19,7 +19,7 @@ $results = getAllObjets();
                 <th>Nom de l'objet</th>
                 <th>Catégorie</th>
                 <th>Propriétaire</th>
-                <th>Date de retour</th>
+                <th>Date retour</th>
             </tr>
         </thead>
         <tbody>
@@ -27,7 +27,8 @@ $results = getAllObjets();
             <tr>
                 <td><?= $result['nom_objet'] ?></td>
                 <td><?= $result['nom_categorie'] ?></td>
-                <td><?= $result['proprietaire'] ?></td>
+                <td><?= $result['nom_proprietaire'] ?></td>
+                <td><?= $result['date_retour'] ?></td>
             </tr>
         <?php } ?>
         </tbody>
