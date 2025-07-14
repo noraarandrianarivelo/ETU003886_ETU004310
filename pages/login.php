@@ -12,15 +12,15 @@
     <div class="signin-container">
         <h1>Sign In</h1>
 
-        <form action="traitement2Hashe.php" method="post">
+        <form action="traitementLogin.php" method="post">
             <div class="form-group">
                 <label for="email">E-mail</label>
-                <input type="email" placeholder="example@xyz" name="Email" id="email" required>
+                <input type="email" placeholder="example@xyz" name="email" id="email" required>
             </div>
 
             <div class="form-group">
                 <label for="password">Mot de passe</label>
-                <input type="password" name="Mot_de_passe" placeholder="Mot de passe" id="password"  required>
+                <input type="password" name="mot_de_passe" placeholder="Mot de passe" id="password"  required>
             </div>
 
             <button type="submit" class="btn">Se Connecter</button>

@@ -15,16 +15,16 @@
     <div class="signup-container">
         <h1>Sign Up</h1>
         
-        <form action="traitement.php" method="post">
+        <form action="traitementInscription.php" method="post">
             <div class="form-group">
                 <label for="nom">Nom</label>
-                <input type="text" placeholder="Nom" name="Nom" id="nom" required>
+                <input type="text" placeholder="Nom" name="nom" id="nom" required>
             </div>
 
             <div class="form-group">
                 <label for="genre">Genre</label>
 
-                <select name="genre" id="genre">
+                <select name="genre" id="genre" required>
                     <option value="H">Homme</option>
                     <option value="F">Femme</option>
                 </select>
@@ -32,22 +32,22 @@
             
             <div class="form-group">
                 <label for="email">E-mail</label>
-                <input type="email" placeholder="example@xyz" name="Email" id="email" required>
+                <input type="email" placeholder="example@xyz" name="email" id="email" required>
             </div>
             
             <div class="form-group">
                 <label for="password">Mot de passe</label>
-                <input type="password" placeholder="Mot de passe" name="Mot_de_passe" id="password" required>
+                <input type="password" placeholder="Mot de passe" name="mot_de_passe" id="password" required>
             </div>
             
             <div class="form-group">
                 <label for="birthdate">Date de naissance</label>
-                <input type="date" name="Date_naissance" id="birthdate" required>
+                <input type="date" name="date_naissance" id="birthdate" required>
             </div>
 
             <div class="form-group">
                 <label for="ville">Ville</label>
-                <input type="text" name="ville" id="ville">
+                <input type="text" name="ville" id="ville" required>
             </div>
 
             

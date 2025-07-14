@@ -1,9 +1,7 @@
 <?php
-include_once '../inc/connexion.php';
 require("../inc/fonction.php");
-$conn = connexion();
 
-$result = getAllObjets($conn);
+$results = getAllObjets();
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -18,21 +16,20 @@ $result = getAllObjets($conn);
     <table class="table table-bordered table-striped">
         <thead class="table-dark">
             <tr>
-                <th>ID</th>
                 <th>Nom de l'objet</th>
                 <th>Catégorie</th>
                 <th>Propriétaire</th>
+                <th>Date de retour</th>
             </tr>
         </thead>
         <tbody>
-        <?php while($row = mysqli_fetch_assoc($result)): ?>
+        <?php foreach($results as $result){ ?>
             <tr>
-                <td><?= $row['id_objet'] ?></td>
-                <td><?= $row['nom_objet'] ?></td>
-                <td><?= $row['nom_categorie'] ?></td>
-                <td><?= $row['proprietaire'] ?></td>
+                <td><?= $result['nom_objet'] ?></td>
+                <td><?= $result['nom_categorie'] ?></td>
+                <td><?= $result['proprietaire'] ?></td>
             </tr>
-        <?php endwhile; ?>
+        <?php } ?>
         </tbody>
     </table>
 </div>

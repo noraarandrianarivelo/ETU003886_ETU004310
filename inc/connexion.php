@@ -6,7 +6,7 @@ function connexion()
     static $connexion = null;
 
     if ($connexion === null) {
-        $connexion = mysqli_connect('localhost', 'root', '', 'Tumblr');
+        $connexion = mysqli_connect('localhost', 'root', '', 'preteur');
 
         if (!$connexion) {
             die('Erreur de connexion a la base de donnees: ' . mysqli_connect_error());
