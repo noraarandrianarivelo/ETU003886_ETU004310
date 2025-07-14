@@ -42,7 +42,7 @@ $user = $_SESSION['user'];
 
                 <div class="d-flex align-items-center">
                     <span class="me-3">
-                        <i class="bi bi-person-fill me-1"></i>Hello, <?= $user['nom']; ?>
+                        <a href="modele.php?p=ficheMembre.php" class="btn btn-dark"><i class="bi bi-person-fill me-1"></i>Hello, <?= $user['nom']; ?></a>
                     </span>
                     <a href="deconnexion.php" class="btn btn-danger btn-sm">Deconnexion</a>
                 </div>

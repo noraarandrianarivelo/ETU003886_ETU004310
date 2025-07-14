@@ -3,15 +3,16 @@ $id_objet = $_GET['id_objet'];
 $objet = getObjetById($id_objet); // fonction à créer si besoin
 $images = getAllImages($id_objet); // retourne toutes les images de l'objet
 $historique = getHistoriqueEmprunts($id_objet); // retourne l'historique des emprunts
+
 ?>
 <div class="container mt-5">
     <h2><?= $objet['nom_objet'] ?></h2>
     <div class="row">
         <div class="col-md-6">
-            <img src="<?= $images[0]['nom_image'] ?>" class="img-fluid mb-3" alt="Image principale">
+            <img src="../assets/uploadImagesObjet/<?= $images[0]['nom_image'] ?>" class="img-fluid mb-3" alt="Image principale">
             <div class="d-flex flex-wrap">
-                <?php for ($i=1; $i < sizeof($images) - 1; $i++) { 
-                    $image = $images[$i];?>
+                <?php for ($i = 1; $i < sizeof($images); $i++) {
+                    $image = $images[$i]; ?>
 
                     <img src="../assets/uploadImagesObjet/<?= $image['nom_image'] ?>" class="img-thumbnail m-1" style="height:80px; width:auto;" alt="Autre image">
                 <?php } ?>
@@ -42,5 +43,5 @@ $historique = getHistoriqueEmprunts($id_objet); // retourne l'historique des emp
         </tbody>
     </table>
 
-    <a href="traitementSuppression.php?id_objet=<?php echo $id_objet?>" class="btn btn-danger">Supprimer les Images</a>
+    <a href="traitementSuppression.php?id_objet=<?php echo $id_objet ?>" class="btn btn-danger">Supprimer les Images</a>
 </div>
