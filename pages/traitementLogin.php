@@ -1,4 +1,5 @@
 <?php 
+session_start();
     require("../inc/fonction.php");
 
     $email = $_POST['email'];
@@ -7,7 +8,9 @@
     if(emailExist($email)){
         $user = getSpecificMember($email, $mot_de_passe);
 
-        header("Location:listeObjet.php");
+$_SESSION['user'] = $user;
+
+        header("Location:modele.php?p=listeObjet.php");
     }
     else{
         header("Location:login.php?error=1");
