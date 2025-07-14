@@ -1,11 +1,11 @@
 CREATE TABLE preteur_membre (
     id_membre INT PRIMARY KEY AUTO_INCREMENT,
-    nom VARCHAR(50), b
-    date_naissance DATE,b
-    genre VARCHAR(1), b
-    email VARCHAR(50), b
+    nom VARCHAR(50), 
+    date_naissance DATE,
+    genre VARCHAR(1), 
+    email VARCHAR(50), 
     ville VARCHAR(50),
-    mot_de_passe VARCHAR(50), b
+    mot_de_passe VARCHAR(50), 
     image_profil VARCHAR(50)
 );
 
@@ -18,11 +18,14 @@ CREATE TABLE preteur_objet (
     id_objet INT PRIMARY KEY AUTO_INCREMENT,
     nom_objet VARCHAR(50),
     id_categorie INT,
-    id_membre INT
+    id_membre INT,
     FOREIGN KEY (id_categorie) REFERENCES preteur_categorie_objet(id_categorie),
-    FOREIGN KEY (id_membre) REFERENCES preteur_membre(id_membre),
+    FOREIGN KEY (id_membre) REFERENCES preteur_membre(id_membre)
 
 );
+
+
+
 
 CREATE TABLE preteur_image_object (
     id_image INT PRIMARY KEY AUTO_INCREMENT,

@@ -25,8 +25,8 @@
                 <label for="genre">Genre</label>
 
                 <select name="genre" id="genre">
-                    <option value="H">H</option>
-                    <option value="F">F</option>
+                    <option value="H">Homme</option>
+                    <option value="F">Femme</option>
                 </select>
             </div>
             
@@ -51,7 +51,10 @@
             </div>
 
             
-            <button type="submit" class="btn">S'inscrire</button>
+    
+    <button type="submit" class="btn">S'inscrire</button>
+            
+            
         </form>
         
         <div class="login-link">
