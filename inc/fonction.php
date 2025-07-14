@@ -281,3 +281,9 @@ function emprunter($id_objet, $nbr_jour, $id_user)
 
     return $requete;
 }
+
+
+
+
+
+

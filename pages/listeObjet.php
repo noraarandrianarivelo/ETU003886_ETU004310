@@ -14,6 +14,7 @@ $nom_objet = $_GET['nom_objet'] ?? '';
 $disponible = isset($_GET['disponible']) ? true : false;
 
 $results = getObjetsFiltres($categorie, $nom_objet, $disponible);
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -39,6 +40,14 @@ $results = getObjetsFiltres($categorie, $nom_objet, $disponible);
 </head>
 
 <body>
+
+ <div class="container mt-5">
+        <div class="row mb-4">
+            <div class="col text-center">
+                <span class="badge bg-success fs-5">Objets OK : <?= $stats['ok'] ?? 0 ?></span>
+                <span class="badge bg-danger fs-5 ms-3">Objets abîmés : <?= $stats['abime'] ?? 0 ?></span>
+            </div>
+        </div>
 
     <form action="traitementAjoutObjet.php" method="post" enctype="multipart/form-data" class="p-4 border rounded-3 bg-light">
         <div class="mb-3">
